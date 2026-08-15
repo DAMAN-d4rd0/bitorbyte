@@ -19,8 +19,34 @@ h1, h2, h3, .uk-logo {
     font-family: 'Montserrat', sans-serif !important;
 }
 
+/* Navbar Corporate Branding */
+.navbar-corporate {
+    background-color: var(--primary-color) !important;
+    padding: 0 1rem;
+}
+
+.navbar-corporate .uk-navbar-item {
+    color: white !important;
+    font-weight: 500;
+}
+
+.navbar-corporate .uk-navbar-item:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Logo Adjustment */
+.navbar-corporate .uk-logo img {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-corporate .uk-logo img:hover {
+    opacity: 0.8;
+}
+
 /* Custom Button Styles */
 .uk-button-primary {
+
     background-color: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
     color: white !important;
