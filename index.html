@@ -18,7 +18,7 @@
 <body class="uk-light">
 
     <!-- Sticky Navigation -->
-    <nav class="uk-navbar-container navbar-corporate" uk-navbar>
+    <nav class="uk-navbar-container navbar-corporate uk-marging" uk-navbar="mode: click">
         <div class="uk-navbar-left">
             <a class="uk-navbar-item uk-logo" href="#">
                 <img src="assets/logo.png" alt="bitORbyte" style="max-height: 50px;">
@@ -26,13 +26,27 @@
         </div>
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
-                <li class="uk-navbar-item"><a href="#casos-exito">Casos de Éxito</a></li>
-                <li class="uk-navbar-item"><a href="#nosotros">Nosotros</a></li>
                 <li class="uk-navbar-item">
                     <a href="#contact" class="uk-button uk-button-primary uk-button-small">Solicitar</a>
                 </li>
             </ul>
         </div>
+
+        <div class="uk-navbar-left">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</div>
+
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-toggle" href="#">
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-xsmall-left">&nbsp; &nbsp;</span>
+            </a>
+            <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+
+                    <li><a href="#">Casos de exito</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+
     </nav>
 
     <!-- Hero Section -->
@@ -40,21 +54,23 @@
     <div class="uk-inline uk-flex uk-flex-center uk-flex-middle" style="background: rgb(184,192,200);">
         <img src=" assets/people.jpeg">
 
-        <div class="uk-overlay uk-overlay-primary  uk-position-bottom" >
-   
+        <div class="uk-overlay uk-overlay-primary  uk-position-bottom">
+
             <h3 style="color:#fdfeff">Haz que la tecnología se adapte a tu negocio con tu presupuesto.</h3>
 
-    
+
 
         </div>
 
-     </div>
+    </div>
     <!-- Manifesto Section -->
     <section class="uk-section" id="manifesto">
         <div class="uk-container">
             <div class="uk-text-center uk-margin-medium-bottom">
-                <h2 class="uk-heading" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">Tú tienes el control</h2>
-                <p class="uk-text-lead" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">No más software genérico que te obliga a cambiar tu forma de trabajar.</p>
+                <h2 class="uk-heading" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">Tú tienes el
+                    control</h2>
+                <p class="uk-text-lead" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">No más
+                    software genérico que te obliga a cambiar tu forma de trabajar.</p>
             </div>
             <div class="uk-grid-match" uk-grid>
                 <div class="uk-width-1-2@m">
@@ -89,9 +105,10 @@
     <section class="uk-section uk-section-muted" id="infographic">
         <div class="uk-container">
             <div class="uk-text-center uk-margin-medium-bottom">
-                 <h2 class="uk-heading" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">El Camino a la
+                <h2 class="uk-heading" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">El Camino a la
                     Digitalización</h2>
-               <p class="uk-text-lead" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">Un proceso diseñado para eliminar el riesgo y maximizar el valor.</p>
+                <p class="uk-text-lead" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">Un proceso
+                    diseñado para eliminar el riesgo y maximizar el valor.</p>
             </div>
 
             <div class="uk-grid-small uk-flex-center" uk-grid>
@@ -149,7 +166,8 @@
                             <span uk-icon="icon: check; ratio: 2" style="color: var(--accent-color);"></span>
                         </div>
                         <h4 class="uk-card-title" style="color: white;">Solución Final</h4>
-                        <p style="color: #cbd5e1;">Cero sorpresa. 100% utilidad. Eres dueño de tu tecnología. <br><br></p>
+                        <p style="color: #cbd5e1;">Cero sorpresa. 100% utilidad. Eres dueño de tu tecnología. <br><br>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -160,9 +178,11 @@
     <section class="uk-section">
         <div class="uk-container">
             <div class="uk-text-center uk-margin-medium-bottom">
-                <h2 class="uk-heading" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">Soluciones Basadas en tu
+                <h2 class="uk-heading" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">Soluciones
+                    Basadas en tu
                     Día a Día</h2>
-               <p class="uk-text-lead" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">Sin módulos extra. Solo lo que necesitas para crecer.</p>
+                <p class="uk-text-lead" style="font-family: 'Montserrat', sans-serif; color: rgba(0,0,0);">Sin módulos
+                    extra. Solo lo que necesitas para crecer.</p>
             </div>
 
             <div class="uk-grid-match" uk-grid>
@@ -234,23 +254,37 @@
                     </p>
                 </div>
                 <div class="uk-width-1-2@m">
-                    <form class="uk-card uk-card-default uk-card-body uk-border-rounded">
+                    <form id="solicitud-form" class="uk-card uk-card-default uk-card-body uk-border-rounded">
                         <div class="uk-margin">
-                            <label class="uk-form-label" style="font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Nombre Completo</label>
-                            <input class="uk-input" type="text" placeholder="Ej. Juan Pérez">
+                            <label class="uk-form-label"
+                                style=" font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Nombre
+                                Completo</label>
+                            <input name="nombre" class="uk-input" type="text" style="color: rgb(0, 0, 0);"
+                                placeholder="Ej. Juan Pérez">
                         </div>
                         <div class="uk-margin">
-                            <label class="uk-form-label" style="font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);" >Empresa</label>
-                            <input class="uk-input" type="text" placeholder="Nombre de tu negocio">
+                            <label class="uk-form-label"
+                                style="font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Empresa</label>
+                            <input name="empresa" class="uk-input" type="text" style=" color: rgb(0, 0, 0);"
+                                placeholder="Nombre de tu negocio">
                         </div>
                         <div class="uk-margin">
-                            <label class="uk-form-label" style="font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Servicio de Interés</label>
-                            <select class="uk-select">
+                            <label class="uk-form-label"
+                                style="font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Servicio de
+                                Interés</label>
+                            <select name="servicio" class="uk-select" style="color: rgb(0, 0, 0);">
                                 <option>Exploración Gratis</option>
                                 <option>POS</option>
                                 <option>E-commerce</option>
                                 <option>Inventarios</option>
                             </select>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label"
+                                style="font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Correo
+                                electrónico</label>
+                            <input name="email" class="uk-input" type="email" style=" color: rgb(0, 0, 0);"
+                                placeholder="correo@tu-dominio.com">
                         </div>
                         <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-medium-top">Enviar
                             Solicitud</button>
