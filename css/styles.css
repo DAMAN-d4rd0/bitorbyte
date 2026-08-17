@@ -2,8 +2,8 @@
     /* Corporate Trust Palette */
     --primary-color: #1B263B;    /* Deep Navy */
     --secondary-color: #F8F9FA;  /* Off-White */
-    --accent-color: #10B981;     /* Soft Emerald */
-    --bg-light: #FFFFFF;
+    --accent-color: rgba(144,238,144);   /* Soft Emerald */
+    --bg-light: #ccccccfa;
     --text-dark: #1E293B;
     --text-muted: #64748B;
 }
@@ -15,12 +15,64 @@ body {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, .uk-logo {
+h1, h2, h3,h4,h5, .uk-logo {
     font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Navbar Corporate Branding */
+.navbar-corporate {
+    background-color: var(--primary-color) !important;
+    padding: 0 1rem;
+}
+
+.navbar-corporate .uk-navbar-item {
+    color: white !important;
+    font-weight: 500;
+}
+
+.navbar-corporate .uk-navbar-item:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Logo Adjustment */
+.navbar-corporate .uk-logo img {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-corporate .uk-logo img:hover {
+    opacity: 0.8;
+}
+
+/* Navbar Corporate Branding */
+.navbar-corporate {
+    background-color: var(--primary-color) !important;
+    padding: 0 1rem;
+}
+
+.navbar-corporate .uk-navbar-item {
+    color: white !important;
+    font-weight: 500;
+}
+
+.navbar-corporate .uk-navbar-item:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Logo Adjustment */
+.navbar-corporate .uk-logo img {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-corporate .uk-logo img:hover {
+    opacity: 0.8;
 }
 
 /* Custom Button Styles */
 .uk-button-primary {
+
+
     background-color: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
     color: white !important;
@@ -48,7 +100,7 @@ h1, h2, h3, .uk-logo {
 
 /* Custom Cards */
 .uk-card-default {
-    border: 1px solid #e2e8f0;
+    border: 1px solid #000000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -67,7 +119,7 @@ h1, h2, h3, .uk-logo {
 
 /* Form Styling */
 .uk-input, .uk-select {
-    border: 1px solid #e2e8f0 !important;
+    border: 1px solid #627081 !important;
     border-radius: 8px !important;
 }
 

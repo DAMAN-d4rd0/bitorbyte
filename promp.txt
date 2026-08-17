@@ -1,0 +1,47 @@
+Quiero hacer una landing page de consultoria de tecnología en html, css y javascipt (vanilla), usando UIKit para CSS, con un UI/Ux Moderno en formato de infografía
+
+El objetivo de bitORbyte es que las PyME's (Pequeñas y medianas empresas) empiezen a usar la tecnologia sin pagar fortunas como las grandes empresas
+
+Entre los servicios se encuentran
+    - Exploración (Para evaluar la tecnología que se usara y el mejor medio) Gratis
+    - Evaluacion (tipo cotización para que el cliente vea los costos de la implementacion) Gratis
+    - Implementeación (Se implementa la solucion a la medida) Gratis
+    - El unico costo es la tecnologia o productos derivados de estas 3 fases
+
+Entre los productos se encuentras
+    - Punto de ventas en formato desktop, SAS o Híbrido
+    - E-commerce en SAAS
+    - Inventarios en formato desktop, SAs o híbrido
+
+bitORbyte (sinonimo de mas con menos en terminos de computación) es un grupo de consultores con mas de 10 años de experiencia en la implementacion de soluciones para las empresas pequeñas y medianas, solventando los altos costos de la tecnologia.
+El lema de bitORbyte es "haz que la tecnología se adapte a tu negocio con tu presupuesto"
+
+Las PyME's deben de sentir que con las soluciones de bitORbyte sean dueños de todo el procesos hasta el producto final (empoderamiento), el diseño visual debe de ser empresarial y fácil para las PyME's y que no sientan que los servicios que se proporcionaran son caros. Para los detalles de los productos hacer enfasis en que la solución es basada en sus dia a dia, sin módulos extra que tendrian que pagar sin usar
+
+
+modificar el header donde dice bitORbyte y el boton de empezar mi exploracion gratis y sustituir por navbar agregando el logotipo que se encuentra en assets llamado logo.png
+Agregar los siguientes 2 items
+- Casos de exito
+- Nosotros
+los cuales depues te dire
+el color de navbar sera el color del fin de pagina donde esta el formulario
+
+modificar la imagen del dueño empoderas y cambiarla por overlay de uikit, y poner adentro el texto "Haz que la tecnología se adapte a tu negocio con tu presupuesto.
+Consultoría experta para PyMEs. Implementamos soluciones reales, eliminamos costos innecesarios y te devolvemos el control de tu empresa." en la parte de abajo, la imagen esta en assets y se llama people.jpeg
+
+html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap" rel="stylesheet">
+CSS
+.bitcount-<uniquifier> {
+  font-family: "Bitcount", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
