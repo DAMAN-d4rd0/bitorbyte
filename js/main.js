@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Add a small delay based on index to create a staggered effect
                 setTimeout(() => {
                     entry.target.classList.add('active');
-                }, index * 150); 
+                }, index * 150);
             }
         });
     }, observerOptions);
@@ -40,22 +40,56 @@ document.addEventListener('DOMContentLoaded', () => {
     /**
      * Simple Form Submission Handler (UX only)
      */
-    const form = document.querySelector('form');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxIeyHQuZ_sAQOrMXCR8wBX3vs1tOSnDPlm4YJOwO2ss2J-poIpBGD1Nh5yr3HDYHXPsw/exec'
+    const form = document.querySelector('#solicitud-form');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            const requiredFields = ['nombre', 'empresa', 'email'];
+            const formData = new FormData(form);
+            let missingFields = [];
+
+            requiredFields.forEach(field => {
+                if (!formData.get(field)) {
+                    missingFields.push(field);
+                }
+            });
+
+            if (missingFields.length > 0) {
+                alert('Por favor, completa los campos obligatorios: ' + missingFields.join(', '));
+                return;
+            }
+
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
-            
             btn.innerText = 'Enviando...';
             btn.disabled = true;
+            const datosForm = new FormData(form)
+            try {
+                const envio = await fetch(scriptURL, {
+                    method: 'POST',
+                    body: datosForm
+                });
+                if (!envio.ok) {
+                    throw new Error('Ocurrió un error en la red');
+                } else {
+                    setTimeout(() => {
+                        alert('¡Gracias! Un consultor de bitORbyte se pondrá en contacto contigo pronto para iniciar tu exploración gratuita.');
+                        btn.innerText = originalText;
+                        btn.disabled = false;
+                        form.reset();
+                    }, 1500);
+                }
 
-            setTimeout(() => {
-                alert('¡Gracias! Un consultor de bitORbyte se pondrá en contacto contigo pronto para iniciar tu exploración gratuita.');
+            } catch (error) {
+                console.error('Error al enviar', error)
+                alert('ocurrio un error al enviar los datos');
                 btn.innerText = originalText;
                 btn.disabled = false;
                 form.reset();
-            }, 1500);
+            }
+
         });
     }
 });
