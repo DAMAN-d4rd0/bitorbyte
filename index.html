@@ -18,7 +18,7 @@
 <body class="uk-light">
 
     <!-- Sticky Navigation -->
-    <nav class="uk-navbar-container navbar-corporate" uk-navbar>
+    <nav class="uk-navbar-container navbar-corporate uk-marging" uk-navbar="mode: click">
         <div class="uk-navbar-left">
             <a class="uk-navbar-item uk-logo" href="#">
                 <img src="assets/logo.png" alt="bitORbyte" style="max-height: 50px;">
@@ -26,13 +26,27 @@
         </div>
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
-                <li class="uk-navbar-item"><a href="#casos-exito">Casos de Éxito</a></li>
-                <li class="uk-navbar-item"><a href="#nosotros">Nosotros</a></li>
                 <li class="uk-navbar-item">
                     <a href="#contact" class="uk-button uk-button-primary uk-button-small">Solicitar</a>
                 </li>
             </ul>
         </div>
+
+        <div class="uk-navbar-left">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</div>
+
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-toggle" href="#">
+                <span uk-navbar-toggle-icon></span> <span class="uk-margin-xsmall-left">&nbsp; &nbsp;</span>
+            </a>
+            <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+
+                    <li><a href="#">Casos de exito</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+
     </nav>
 
     <!-- Hero Section -->
@@ -240,18 +254,19 @@
                     </p>
                 </div>
                 <div class="uk-width-1-2@m">
-                    <form id="solicitud-form" class="uk-card uk-card-default uk-card-body uk-border-rounded"
-                        >
+                    <form id="solicitud-form" class="uk-card uk-card-default uk-card-body uk-border-rounded">
                         <div class="uk-margin">
                             <label class="uk-form-label"
                                 style=" font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Nombre
                                 Completo</label>
-                            <input name="nombre" class="uk-input" type="text" style="color: rgb(0, 0, 0);" placeholder="Ej. Juan Pérez">
+                            <input name="nombre" class="uk-input" type="text" style="color: rgb(0, 0, 0);"
+                                placeholder="Ej. Juan Pérez">
                         </div>
                         <div class="uk-margin">
                             <label class="uk-form-label"
                                 style="font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Empresa</label>
-                            <input name="empresa" class="uk-input" type="text" style=" color: rgb(0, 0, 0);" placeholder="Nombre de tu negocio">
+                            <input name="empresa" class="uk-input" type="text" style=" color: rgb(0, 0, 0);"
+                                placeholder="Nombre de tu negocio">
                         </div>
                         <div class="uk-margin">
                             <label class="uk-form-label"
@@ -266,8 +281,10 @@
                         </div>
                         <div class="uk-margin">
                             <label class="uk-form-label"
-                                style="font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Correo electrónico</label>
-                            <input name="email" class="uk-input" type="email" style=" color: rgb(0, 0, 0);" placeholder="correo@tu-dominio.com">
+                                style="font-family: 'Montserrat', sans-serif; color: rgb(0, 0, 0);">Correo
+                                electrónico</label>
+                            <input name="email" class="uk-input" type="email" style=" color: rgb(0, 0, 0);"
+                                placeholder="correo@tu-dominio.com">
                         </div>
                         <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-medium-top">Enviar
                             Solicitud</button>

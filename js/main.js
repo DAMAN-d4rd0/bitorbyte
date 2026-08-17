@@ -45,6 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (form) {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            const requiredFields = ['nombre', 'empresa', 'email'];
+            const formData = new FormData(form);
+            let missingFields = [];
+
+            requiredFields.forEach(field => {
+                if (!formData.get(field)) {
+                    missingFields.push(field);
+                }
+            });
+
+            if (missingFields.length > 0) {
+                alert('Por favor, completa los campos obligatorios: ' + missingFields.join(', '));
+                return;
+            }
+
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
             btn.innerText = 'Enviando...';
